@@ -159,4 +159,4 @@ pnpm test        # run once
 pnpm test:watch  # watch mode
 ```
 
-CI runs lint, test, and build on pull requests via [`.github/workflows/ci.yml`](../.github/workflows/ci.yml).
+CI runs `pnpm test` and `pnpm lint` on push/PR via [`.github/workflows/ci.yml`](../.github/workflows/ci.yml). Production build (`pnpm build`) is validated manually — it requires `GITHUB_TOKEN` and third-party fetches during static generation.
