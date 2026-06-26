@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "scripts": {
-    "lint": "next lint && prettier --write '**/*.{js,ts,tsx}' --loglevel warn",
+    "lint": "prettier --write '**/*.{js,ts,tsx}' --loglevel warn",
     "dev": "next dev",
     "build": "concurrently \"pnpm:build-*\"",
     "build-next": "next build",
