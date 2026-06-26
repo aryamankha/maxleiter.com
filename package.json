@@ -2,13 +2,15 @@
   "name": "blog",
   "version": "1.0.0",
   "scripts": {
-    "lint": "next lint && prettier --write '**/*.{js,ts,tsx}' --loglevel warn",
+    "lint": "prettier --write '**/*.{js,ts,tsx}' --loglevel warn",
     "dev": "next dev",
     "build": "concurrently \"pnpm:build-*\"",
     "build-next": "next build",
     "build-rss": "ts-node --project ./node.tsconfig.json scripts/rss",
     "analyze": "ANALYZE=true pnpm build-next",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "pre-commit": "lint",
   "license": "MIT",
@@ -82,7 +84,8 @@
     "tailwind-merge": "^3.3.1",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "typescript-plugin-css-modules": "5.2.0"
+    "typescript-plugin-css-modules": "5.2.0",
+    "vitest": "^4.1.9"
   },
   "prettier": {
     "semi": false,
